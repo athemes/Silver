@@ -1,0 +1,100 @@
+.social-navigation {
+	padding-left: 0;
+	text-align: right;
+}
+.social-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-navigation li {
+	display: inline-block;
+	border-radius: 50%;
+	margin: 7px;
+}
+.social-navigation a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    text-align: center;
+    box-shadow: 0 0 45px rgba(34, 32, 49, 0.05);
+    background-color: #dee6f1;
+    position: relative;
+    top: 0;
+    transition: all 0.4s;
+
+    &:hover {
+		top: -2px;
+		color: #000;
+		box-shadow: 0 0 45px rgba(34, 32, 49, 0.1);
+	}
+}
+.social-navigation a:before {
+	font-family: Fontello;
+}
+.social-navigation a[href*="twitter.com"]::before {
+	content: '\e80b';
+}
+.social-navigation a[href*="facebook.com"]::before {
+	content: '\e811';
+}
+.social-navigation a[href*="plus.google.com"]::before {
+	content: '\e800';
+}
+.social-navigation a[href*="google.com/+"]::before {
+	content: '\e800';
+}
+.social-navigation a[href*="dribbble.com"]::before {
+	content: '\e806';
+}
+.social-navigation a[href*="pinterest.com"]::before {
+	content: '\e802';
+}
+.social-navigation a[href*="youtube.com"]::before {
+	content: '\e80c';
+}
+.social-navigation a[href*="flickr.com"]::before {
+	content: '\e807';
+}
+.social-navigation a[href*="vimeo.com"]::before {
+	content: '\e80d';
+}
+.social-navigation a[href*="instagram.com"]::before {
+	content: '\e817';
+}
+.social-navigation a[href*="linkedin.com"]::before {
+	content: '\e809';
+}
+.social-navigation a[href*="tumblr.com"]::before {
+	content: '\e814';
+}
+.social-navigation a[href*="soundcloud.com"]::before {
+	content: '\e813';
+}
+.social-navigation a[href*="spotify.com"]::before {
+	content: '\e804';
+}
+.social-navigation a[href*="weibo.com"]::before {
+	content: '\e808';
+}
+.social-navigation a[href*="xing.com"]::before {
+	content: '\e80e';
+}
+.social-navigation a[href*="stumbleupon.com"]::before {
+	content: '\e801';
+}
+.social-navigation a[href*="reddit.com"]::before {
+	content: '\e805';
+}
+.social-navigation a[href*="vk.com"]::before {
+	content: '\e80a';
+}
+.social-navigation a[href*="github.com"]::before {
+	content: '\e812';
+}

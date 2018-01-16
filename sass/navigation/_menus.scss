@@ -1,0 +1,258 @@
+.main-navigation {
+	display: block;
+	text-align: left;
+	padding-right: 0;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				background-color: #fff;
+
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+				color: #000;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		display: inline-block;
+		padding: 15px;
+		position: relative;
+		font-family: 'Poppins', 'sans-serif';
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: #000;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 800;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Mobile menu */
+
+.btn-menu {
+	display: none;
+	text-align: right;
+	font-size: 28px;
+	color: #000;
+	line-height: 1;
+	cursor: pointer;
+	margin-top: 20px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.btn-menu .icon-menu {
+	cursor: pointer;	
+}
+.btn-submenu {
+	position: relative;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	padding: 10px;
+	margin-left: 10px;
+}
+.btn-submenu:before {
+	content: "+";
+	color: #fff;
+}
+.btn-submenu.active:before {
+	content: "-"
+}
+.btn-close-menu {
+	display: none;
+}
+#mainnav-mobi .btn-close-menu {
+	display: block;
+	position: fixed;
+	top: 15px;
+	right: 30px;
+	color: #fff;
+	font-size: 32px;
+	font-weight: 800;
+	cursor: pointer;
+}
+#mainnav-mobi {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202529;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 60px;
+    overflow-y: auto;
+    z-index: 1111;
+}
+#mainnav-mobi a {
+	padding-left: 15px;
+	padding-right: 15px;
+	width: auto;
+	color: #fff;
+	display: inline-block;
+}
+#mainnav-mobi li {
+	display: block;
+	width: 100%;
+	clear: both;
+	text-align: center;
+	float: none;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 18px;
+}
+#mainnav-mobi li a::after,
+#mainnav-mobi li a::before {
+	display: none;
+}
+#mainnav-mobi ul {
+	float: none;
+	text-align: center;
+}
+#mainnav-mobi ul ul {
+	position: relative;
+	top: 11px;
+	left: 0;
+	border-radius: 0;
+	border: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+#mainnav-mobi ul ul ul {
+    margin-bottom: 15px;
+}
+#mainnav-mobi .nav-cart,
+#mainnav-mobi .header-account,
+#mainnav-mobi .header-search {
+	width: auto;
+	display: inline-block;
+	font-size: 13px;
+}
+#mainnav-mobi .nav-cart a,
+#mainnav-mobi .header-account a,
+#mainnav-mobi .header-search a {
+	display: inline-block;
+	font-size: 13px;
+	color: #4a4a4a;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	margin: 5px;
+}
+#mainnav-mobi .header-search-form {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+.navigation.pagination {
+	text-align: center;
+	padding: 60px 15px;
+
+	.page-numbers {
+	    background: #fff;
+	    width: 50px;
+	    height: 50px;
+	    display: inline-block;
+	    line-height: 50px;
+	    border-radius: 50%;
+	    box-shadow: 0 0 45px rgba(34, 32, 49, 0.1);
+	    margin: 0 10px;
+
+	    &.next,
+	    &.prev {
+	    	box-shadow: none;
+	    	width: auto;
+	    	height: auto;
+	    	background: transparent;
+	    }
+
+	    &.current {
+	    	background-color: $primary;
+	    	color: #000;
+	    }
+	}
+
+}
+
+.mobile-nav,
+.btn-menu {
+	@include max1199 {
+		display: block;
+	}	
+}
+.main-navigation {
+	@include max1199 {
+		display: none;
+	}	
+}	

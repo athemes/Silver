@@ -1,0 +1,17 @@
+.site-footer {
+	padding: 60px 0;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 0px 55px rgba(0, 0, 0, 0.1);
+
+	.site-info {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 600;
+
+		a {
+			color: #393844;
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin gradient() {
+	background: #fc254d;
+	background: -moz-linear-gradient(45deg, #fc254d 0%, #fc254d 43%, #ac16f7 100%);
+	background: -webkit-linear-gradient(45deg, #fc254d 0%,#fc254d 43%,#ac16f7 100%);
+	background: linear-gradient(45deg, #fc254d 0%,#fc254d 43%,#ac16f7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc254d', endColorstr='#ac16f7',GradientType=1 );
+}
+
+
+
+//Media queries
+$max767: 767px;
+$max991: 991px;
+$max1024: 1024px;
+$max1199: 1199px;
+
+@mixin max767 {
+	@media (max-width: #{$max767}) {
+		@content;
+	}
+}
+@mixin max991 {
+	@media (max-width: #{$max991}) {
+		@content;
+	}
+}
+@mixin max1024 {
+	@media (max-width: #{$max1024}) {
+		@content;
+	}
+}
+@mixin max1199 {
+	@media (max-width: #{$max1199}) {
+		@content;
+	}
+}

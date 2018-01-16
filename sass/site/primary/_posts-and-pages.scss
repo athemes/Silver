@@ -1,0 +1,294 @@
+.site-content {
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 60px;
+	padding: 60px;
+	background-color: #fff;
+	box-shadow: 0 0 30px rgba(0,0,0,0.05);	
+}
+
+.updated:not(.published) {
+	display: none;
+}
+.entry-header {
+	margin-bottom: 60px;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.single-thumb {
+	margin: -60px -60px 30px;
+}
+
+
+/* Title banner */
+.header-banner {
+	background-color: #242b34;
+	padding: 120px 0 180px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	& > .container {
+		position: relative;
+		z-index: 11;
+	}
+
+	.entry-title,
+	.page-title {
+		margin: 0;
+		color: #fff;
+	}
+	.archive-description {
+		margin: 10px 0 0;
+	}
+
+	.single &,
+	.page:not(.home) & {
+		margin-bottom: 0;
+	}
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: rgba(36, 43, 52, 0.5);
+		z-index: 0;
+	}
+}
+.single,
+.page {
+	.content-area {
+		margin-top: -130px;
+	}
+	.widget-area {
+		margin-top: 60px;
+	}
+}
+
+
+/* The grid */
+.posts-loop {
+	display: flex;
+	flex-wrap: wrap;
+
+	.loop-banner {
+		display: flex;
+		margin: 0;
+		padding: 15px;
+		width: 33.333333%;
+
+		&-inner {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			background-color: #3e505e;
+			padding: 45px;
+			text-align: center;
+			box-shadow: 0 0 30px rgba(0,0,0,0.05);
+			color: #a2a3a4;
+
+			& .widget-title {
+				color: #fff;
+				margin: 0 0 30px;
+			}		
+
+		}
+
+		.subscribe-box-section {
+			input:not([type="submit"]) {
+				background-color: transparent;
+				margin-bottom: 15px;
+				text-align: center;
+				border-color: rgba(255,255,255,0.2);
+			}
+		}
+
+		&.looptwo {
+
+			.loop-banner-inner {
+				background-color: #8ca8bc;
+			}
+		}
+	}
+
+	.hentry {
+		display: flex;
+		margin: 0;
+		padding: 15px;
+		width: 33.3333333%;
+		box-shadow: unset;
+		background: transparent;
+
+		&:nth-of-type(3n+1) {
+			clear: left;
+		}	
+
+		.content-inner {
+			width: 100%;
+			background-color: #fff;
+			padding: 45px;
+			text-align: center;
+			box-shadow: 0 0 30px rgba(0,0,0,0.05);
+			@include max767 {
+				padding: 15px;
+			}			
+		}
+
+		.entry-header {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		.entry-title {
+			font-size: 26px;
+			margin: 15px 0;
+		}
+
+		.entry-meta {
+			line-height: 1;
+		}
+
+		.entry-thumb {
+		}
+
+
+		@include max1199 {
+			width: 50%;
+		}
+		@include max991 {
+			width: 100%;
+		}		
+	}
+
+	.large-post {
+
+		position: relative;
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #000;
+		}
+	}
+
+}
+.posted-on,
+.byline {
+	color: rgba(255,255,255,0.3);
+	font-size: 13px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-weight: 600;
+
+	a {
+		color: #fff;
+		padding-bottom: 3px;
+		border-bottom: 2px solid rgba(255,255,255,0.3);
+
+		.posts-loop & {
+			color: #adb3bc;
+		}		
+	}
+}
+.byline::before {
+	content: '/';
+	margin: 0 15px;
+}
+.entry-title {
+	a {
+		color: #2a394d;
+
+		&:hover {
+			text-decoration: none;
+			color: #fc254d;
+		}
+	}
+
+	.header-banner & {
+		font-size: 56px;
+	}
+}
+.first-cat {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    background-color: $primary;
+    line-height: 1;
+    padding: 5px 7px;
+    border-radius: 15px;
+    color: #000;
+}
+.first-cat:hover {
+	color: #fff;
+	background-color: #2a394d;
+}
+
+/* Single posts */
+.single,
+.page {
+	.entry-title {
+		margin: 30px 0;
+		max-width: 60%;
+	}
+	.site-main {
+		padding-right: 30px;
+	}
+}
+.cat-links a {
+    color: #fff;
+	padding-bottom: 3px;
+	border-bottom: 2px solid rgba(255,255,255,0.3);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 13px;
+	font-weight: 600;
+}
+.entry-thumb {
+	text-align: center;
+
+	img {
+		border-radius: 15px;
+	}	
+}
+.single-thumb {
+	text-align: center;
+}
+.entry-content {
+	a {
+		border-bottom: 2px solid #f4f4f4;
+		color: #000;
+		padding-bottom: 2px;
+
+		&:hover {
+			border-color: #000;
+		}
+	}
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
